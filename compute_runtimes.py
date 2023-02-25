@@ -8,7 +8,7 @@ from functools import reduce
 
 def compute(c, rhos):
     # enumerate all lattice points and save to out.json
-    subprocess.run("polymake --script points " + " ".join(map(str, c)),
+    subprocess.run("polymake --script points.pl " + " ".join(map(str, c)),
             shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     # load the lattice points
@@ -37,7 +37,6 @@ rhos = [2, 3, 4, 2]
 print(f'rhos = {rhos}')
 
 # we simply consider C = (r,r,r,r) for increasing r
-
 rs = []
 Gs = []
 points = []

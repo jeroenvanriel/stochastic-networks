@@ -6,7 +6,7 @@ rs = list(range(85, 150+1, 5))
 
 # use polymake perl script to compute number of lattice points
 # for the varying values of r
-res = subprocess.run("polymake --script count " + " ".join(map(str, rs)),
+res = subprocess.run("polymake --script count.pl " + " ".join(map(str, rs)),
         shell=True, stdout=subprocess.PIPE)
 
 # parse the returned comma-separated string
