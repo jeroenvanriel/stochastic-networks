@@ -10,3 +10,5 @@ The script calls the `points` polymake script to get a list of lattice points (s
 - The `compute_points.py` script calls the `count` polymake script that computes cardinality of the state space for various larger values of `r`.
 - Both script store their results in Python pickle files `runtime_result.p` and `points_result.p`, which are read by `estimate_plot.py` to produce the final figure.
 
+![runtime estimates](runtime.png)
+
